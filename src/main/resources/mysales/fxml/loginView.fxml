@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="mysales.controllers.LoginController"
+            alignment="CENTER" vgap="5" hgap="20" styleClass="grid-login">
+
+    <Label styleClass="texto-padrao" text="Usuário" GridPane.rowIndex="0" />
+    <TextField fx:id="txf_usuario" promptText="Nome de usuário" styleClass="txf-style1" GridPane.rowIndex="1" />
+    <Label styleClass="texto-padrao" text="Senha" GridPane.rowIndex="2" />
+    <PasswordField fx:id="pwf_senha" promptText="Senha do usuário" styleClass="txf-style1" GridPane.rowIndex="3" />
+    <Button styleClass="btn-style1" fx:id="btn_entrar" text="Entrar" GridPane.rowIndex="5" GridPane.halignment="CENTER" />
+    <Label styleClass="texto-resposta" fx:id="lbl_resposta" text="" GridPane.rowIndex="4" GridPane.halignment="CENTER" />
+
+</GridPane>

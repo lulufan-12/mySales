@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import mysales.controls.TextFieldInteger?>
+<GridPane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="mysales.controllers.CadUsuarioController"
+      vgap="10" hgap="10" alignment="CENTER">
+
+        <Label text="Nome Completo" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="txf_nome" promptText="Nome Completo" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="3" />
+        <Label text="Usuário"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="txf_usuario" promptText="Login" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Senha"  GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <PasswordField fx:id="pwf_senha" promptText="Senha" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Confirmar Senha" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <PasswordField fx:id="pwf_senha2" promptText="Confirmar Senha" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label text="E-mail" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="txf_email" promptText="E-mail" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="2" />
+        <Label text="Endereço" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField fx:id="txf_endereco" promptText="Endereço" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.columnSpan="3" />
+        <Label text="Número" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <TextFieldInteger fx:id="txf_numero" promptText="Número" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Label text="Complemento" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+        <TextField fx:id="txf_complemento" promptText="Complemento" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+        <Label text="Bairro" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <TextField fx:id="txf_bairro" promptText="Bairro" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <Label text="CEP" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+        <TextField fx:id="txf_cep" promptText="CEP" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+        <Label text="Super Usuário" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+        <CheckBox fx:id="ckb_superusuario" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <Label text="Função" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+        <ComboBox fx:id="cbx_funcao"  GridPane.columnIndex="3" GridPane.rowIndex="10" GridPane.halignment="RIGHT"></ComboBox>
+        <Button fx:id="btn_cadastrar" text="Cadastrar Usuário" GridPane.columnIndex="3" GridPane.rowIndex="14" GridPane.halignment="RIGHT" />
+        <Label text="CPF" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+        <TextField fx:id="txf_cpf" promptText="CPF" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+        <Label text="RG" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+        <TextField fx:id="txf_rg" promptText="RG" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+
+
+</GridPane>

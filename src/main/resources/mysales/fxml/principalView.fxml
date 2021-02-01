@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="mysales.controllers.PrincipalController"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <HBox styleClass="hbx-style1" spacing="5">
+            <Region prefWidth="20"></Region>
+            <Label text="Bem-vindo(a)" styleClass="texto-padrao-branco" />
+            <Label fx:id="lbl_nomeusuario" text=""  styleClass="texto-padrao-branco" />
+            <Region HBox.hgrow="ALWAYS"></Region>
+            <Button styleClass="btn-style2" fx:id="btn_encerrar_sessao" text="Encerrar Sessão" />
+        </HBox>
+    </top>
+    <center>
+            <Accordion>
+                <panes>
+                    <TitledPane text="Vendas" fx:id="titled_vendas">
+                        <ScrollPane fitToWidth="true" fitToHeight="true">
+                            <GridPane vgap="10" hgap="10" alignment="CENTER">
+                                <Button styleClass="btn-style3" text="Fazer Pedido" />
+                                <Button styleClass="btn-style3" text="Fila de Pedidos" GridPane.columnIndex="1" />
+                                <Button styleClass="btn-style3" text="Repor produtos" GridPane.columnIndex="2" />
+                            </GridPane>
+                        </ScrollPane>
+                    </TitledPane>
+                    <TitledPane text="Relatórios">
+                        <ScrollPane fitToWidth="true" fitToHeight="true">
+                            <GridPane vgap="10" hgap="10" alignment="CENTER">
+                                <Button styleClass="btn-style3" text="Relatório Mensal" />
+                                <Button styleClass="btn-style3" text="Relatório Trimestral" GridPane.columnIndex="1" />
+                                <Button styleClass="btn-style3" text="Relatório Semestral" GridPane.columnIndex="2" />
+                                <Button styleClass="btn-style3" text="Relatório Anual" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            </GridPane>
+                        </ScrollPane>
+                    </TitledPane>
+                    <TitledPane text="Gerenciamento">
+                        <ScrollPane fitToWidth="true" fitToHeight="true">
+                            <GridPane vgap="10" hgap="10" alignment="CENTER">
+                                <Button styleClass="btn-style3" fx:id="btn_cadastro_cat_produtos" text="Cadastrar Categoria de Produtos" />
+                                <Button styleClass="btn-style3" fx:id="btn_cadastro_produtos" text="Cadastrar Produtos" GridPane.columnIndex="1" />
+                                <Button styleClass="btn-style3" fx:id="btn_cadastro_funcao" text="Cadastrar Função" GridPane.columnIndex="2" />
+                                <Button styleClass="btn-style3" fx:id="btn_cadastro_usuario" text="Cadastrar Usuário" GridPane.rowIndex="1" />
+                                <Button styleClass="btn-style3" fx:id="btn_cadastro_fornecedores" text="Cadastrar Fornecedor" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                                <Button styleClass="btn-style3" fx:id="btn_alterar_dados" text="Alterar ou Excluir Dados" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+                            </GridPane>
+                        </ScrollPane>
+                    </TitledPane>
+                </panes>
+            </Accordion>
+    </center>
+
+    <bottom>
+        <HBox styleClass="hbx-style1" alignment="CENTER">
+            <Label styleClass="texto-padrao-branco" text="Desenvolvido por Luis Felipe Andrade Martins" />
+        </HBox>
+    </bottom>
+
+</BorderPane>
+

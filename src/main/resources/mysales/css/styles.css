@@ -1,0 +1,68 @@
+//TEXTOS
+
+
+.texto-padrao{
+    -fx-font-size: 14px;
+}
+.texto-padrao-branco{
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFF;
+    -fx-pref-height: 40px;
+    -fx-text-alignment: center;
+    -fx-margin-left: 10px;
+    -fx-font-weight: bold;
+}
+.texto-resposta{
+    -fx-font-size: 12px;
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-pref-width: 200px;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
+
+
+//BOTÕES
+
+.btn-style1{
+    -fx-font-size: 14px;
+}
+.btn-style2{
+    -fx-background-color: inherit;
+    -fx-pref-height: 40px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFF;
+    -fx-font-weight: bold;
+}
+.btn-style2:hover {
+    -fx-background-color: #ae9de0;
+}
+
+.btn-style3{
+    -fx-min-width: 150px;
+    -fx-min-height: 150px;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 150px;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
+
+
+//LAYOUTS
+
+.grid-login{
+
+}
+
+.hbx-style1{
+    -fx-pref-height: 40px;
+    -fx-background-color: #7c6da8;
+}
+
+
+//CAIXAS DE TEXTOS
+
+.txf-style1{
+    -fx-pref-width: 150px;
+}
