@@ -3,7 +3,6 @@ package mysales.stages;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -14,7 +13,6 @@ public class AlterarDadosStage extends Stage {
     private static String css_path = "/mysales/css/styles.css";
     private static String fxml_path = "/mysales/fxml/alterarDadosView.fxml";
     private static final String icon_path = "/mysales/imgs/icone.png";
-
 
     private AlterarDadosStage(){
         super();

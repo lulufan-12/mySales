@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="mysales.controllers.AlterarFornecedoresController"
+          prefHeight="400.0" prefWidth="600.0"
+          alignment="CENTER" hgap="10" vgap="10">
+
+    <Label text="Nome da Empresa" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="txf_nome" promptText="Nome da Empresa" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="3" />
+    <Label text="Endereço" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="txf_endereco" promptText="Endereço" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="3" />
+    <Label text="Bairro"  GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="txf_bairro" promptText="Bairro" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text="Número" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <TextField fx:id="txf_numero" promptText="Número" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+    <Label text="Complemento" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField fx:id="txf_complemento" promptText="Complemento" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label text="CEP" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <TextField fx:id="txf_cep" promptText="CEP" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+    <Label text="CNPJ"  GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <TextField fx:id="txf_cnpj" promptText="CNPJ" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <Label text="Contato local" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <TextField fx:id="txf_contato_local" promptText="Nome do Contato Local" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.columnSpan="3" />
+    <Label text="Telefone" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <TextField fx:id="txf_telefone" promptText="Telefone" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <Label text="Celular" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+    <TextField fx:id="txf_celular" promptText="Celular" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+    <Label text="E-mail" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+    <TextField fx:id="txf_email" promptText="E-mail" GridPane.columnIndex="1" GridPane.rowIndex="8" GridPane.columnSpan="3" />
+    <Button fx:id="btn_cadastrar" text="Alterar Fornecedor" GridPane.columnIndex="3" GridPane.rowIndex="9" GridPane.halignment="RIGHT" />
+</GridPane>

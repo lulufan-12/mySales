@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import mysales.controls.TextFieldInteger?>
+<?import mysales.controls.TextFieldDouble?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="mysales.controllers.AlterarProdutoController"
+          prefHeight="400.0" prefWidth="600.0"
+          alignment="CENTER" vgap="10" hgap="10">
+
+    <Label text="Código" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextFieldInteger fx:id="txf_codigo" GridPane.columnSpan="2" promptText="Código" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label text="Nome" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="txf_nome" GridPane.columnSpan="3" promptText="Nome do Produto" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label text="Descrição" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextArea fx:id="txa_descricao" promptText="Descrição do Produto" GridPane.columnSpan="4" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <Label text="Preço" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextFieldDouble fx:id="txf_preco" promptText="Preço do Produto" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label text="Categoria"  GridPane.columnIndex="2" GridPane.rowIndex="4"  />
+    <ComboBox fx:id="cbx_categoria"  GridPane.columnIndex="3" GridPane.rowIndex="4"></ComboBox>
+    <Button fx:id="btn_cadastrar_produto" text="Alterar Produto" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.halignment="RIGHT" />
+</GridPane>

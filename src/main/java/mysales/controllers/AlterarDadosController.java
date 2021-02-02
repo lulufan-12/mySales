@@ -5,8 +5,12 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import mysales.controls.Memoria;
 import mysales.database.Repositorio;
+import mysales.database.Sessao;
 import mysales.database.entities.*;
+import mysales.stages.*;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -60,11 +64,12 @@ public class AlterarDadosController {
             }
         });
         btn_alterar.setOnAction(e -> {
-            Object celula = tbl_conteudo.getSelectionModel().getSelectedItem();
-            if(celula == null){
+            Object linha = tbl_conteudo.getSelectionModel().getSelectedItem();
+            if(linha == null){
                 System.out.println("Não há célula selecionada.");
                 return;
             }
+            alterarLinha(linha);
         });
         btn_excluir.setOnAction(e -> {
             Object linha = tbl_conteudo.getSelectionModel().getSelectedItem();
@@ -74,6 +79,33 @@ public class AlterarDadosController {
             }
             excluirLinha(linha);
         });
+    }
+    private void alterarLinha(Object linha){
+        if(linha instanceof Usuario){
+            Usuario u = (Usuario) linha;
+            Memoria.setUsuario(u);
+            AlterarUsuarioStage.abrir();
+        }
+        else if(linha instanceof Produto){
+            Produto p = (Produto) linha;
+            Memoria.setProduto(p);
+            AlterarProdutoStage.abrir();
+        }
+        else if(linha instanceof Fornecedores){
+            Fornecedores f = (Fornecedores) linha;
+            Memoria.setFornecedor(f);
+            AlterarFornecedorStage.abrir();
+        }
+        else if(linha instanceof CategoriaProduto){
+            CategoriaProduto cp = (CategoriaProduto) linha;
+            Memoria.setCategoria(cp);
+            AlterarCategoriaStage.abrir();
+        }
+        else if(linha instanceof Funcao){
+            Funcao f = (Funcao) linha;
+            Memoria.setFuncao(f);
+            AlterarFuncaoStage.abrir();
+        }
     }
     private void excluirLinha(Object linha){
         if(linha instanceof Usuario)
@@ -89,6 +121,13 @@ public class AlterarDadosController {
     }
     private void excluirUsuario(Object linha){
         Usuario usuario = (Usuario) linha;
+        System.out.println(usuario.getNome());
+        System.out.println(Sessao.getUsuario().getNome());
+        if(usuario.getNome().equals(Sessao.getUsuario().getNome())){
+            System.out.println("Não é possível excluir o usuário logado.");
+            return;
+        }
+        System.out.println("Usuario excluído de mentirinha");
         for(Usuario u : lista_usuarios)
             if(u.getCodigo() == usuario.getCodigo()){
                 Repositorio.deletar(usuario);

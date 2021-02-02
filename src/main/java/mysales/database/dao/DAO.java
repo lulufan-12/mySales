@@ -38,7 +38,7 @@ public class DAO<E> {
     }
     public void atualizar(E entidade){
         EM.getTransaction().begin();
-        EM.merge(entidade);
+        EM.merge(EM.contains(entidade) ? entidade : EM.merge(entidade));
         EM.getTransaction().commit();
     }
     public E obterPorIndice(int codigo){

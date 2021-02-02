@@ -34,6 +34,26 @@ public class Repositorio {
         DAO<CategoriaProduto> dao = new DAO<>(CategoriaProduto.class);
         dao.inserir(novo);
     }
+    public static void atualizar(Fornecedores novo){
+        DAO<Fornecedores> dao = new DAO<>(Fornecedores.class);
+        dao.atualizar(novo);
+    }
+    public static void atualizar(Usuario novo){
+        DAO<Usuario> dao = new DAO<>(Usuario.class);
+        dao.atualizar(novo);
+    }
+    public static void atualizar(Produto novo){
+        DAO<Produto> dao = new DAO<>(Produto.class);
+        dao.atualizar(novo);
+    }
+    public static void atualizar(Funcao novo){
+        DAO<Funcao> dao = new DAO<>(Funcao.class);
+        dao.atualizar(novo);
+    }
+    public static void atualizar(CategoriaProduto novo){
+        DAO<CategoriaProduto> dao = new DAO<>(CategoriaProduto.class);
+        dao.atualizar(novo);
+    }
     public static void deletar(CategoriaProduto deletado){
         DAO<CategoriaProduto> dao = new DAO<>(CategoriaProduto.class);
         dao.remover(deletado);
